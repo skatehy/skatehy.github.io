@@ -1,1 +1,181 @@
-<h1>hello 欢迎来到hy的主页</h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习与交流平台</title>
+    <style>
+        body {
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .module {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+        .module h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #2980b9;
+        }
+        .link-list {
+            list-style: none;
+            padding: 0;
+        }
+        .link-list li {
+            margin-bottom: 15px;
+        }
+        .link-list a {
+            display: block;
+            padding: 12px 18px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2);
+        }
+        .link-list a:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+        .script-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .script-item h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .script-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .script-item code {
+            background-color: #e9f7fe;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #2980b9;
+        }
+        .discussion-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .discussion-form input,
+        .discussion-form textarea,
+        .discussion-form button {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+        .discussion-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .discussion-form button {
+            background-color: #2ecc71;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .discussion-form button:hover {
+            background-color: #27ae60;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>学习与交流平台</h1>
+
+        <!-- 模块一：课程资源与反馈 -->
+        <div class="module">
+            <h2>📚 课程资源与反馈</h2>
+            <ul class="link-list">
+                <li><a href="#course" onclick="alert('课程链接已点击！')">📘 课程链接</a></li>
+                <li><a href="#lectures" onclick="alert('讲义链接已点击！')">📝 讲义链接</a></li>
+                <li><a href="#assignments" onclick="alert('作业链接已点击！')">✅ 作业链接</a></li>
+                <li><a href="#feedback" onclick="alert('欢迎提出提问或指正！')">❓ 提问或者指正</a></li>
+            </ul>
+        </div>
+
+        <!-- 模块二：脚本库及使用场景 -->
+        <div class="module">
+            <h2>🛠️ 我的脚本库及使用场景</h2>
+            <div class="script-item">
+                <h3>数据清洗脚本 (clean_data.py)</h3>
+                <p><strong>用途：</strong>自动清理CSV文件中的缺失值和异常值</p>
+                <p><strong>使用场景：</strong>处理从公开数据集下载的原始数据</p>
+                <p><strong>调用方式：</strong><code>python clean_data.py --input data.csv --output cleaned.csv</code></p>
+            </div>
+            <div class="script-item">
+                <h3>自动化报告生成器 (report_gen.py)</h3>
+                <p><strong>用途：</strong>根据数据生成PDF格式的周报</p>
+                <p><strong>使用场景：</strong>每周向团队提交项目进度报告</p>
+                <p><strong>调用方式：</strong><code>python report_gen.py --week 42</code></p>
+            </div>
+            <div class="script-item">
+                <h3>API监控脚本 (api_monitor.sh)</h3>
+                <p><strong>用途：</strong>定时检查关键API的可用性</p>
+                <p><strong>使用场景：</strong>部署在服务器上，每日自动运行</p>
+                <p><strong>调用方式：</strong><code>bash api_monitor.sh >> logs/monitor_$(date +%Y%m%d).log</code></p>
+            </div>
+        </div>
+
+        <!-- 模块三：讨论交流与意见收集 -->
+        <div class="module">
+            <h2>💬 讨论交流与意见收集</h2>
+            <form class="discussion-form" onsubmit="alert('感谢您的意见已提交！'); return false;">
+                <input type="text" placeholder="您的姓名或昵称" required>
+                <input type="email" placeholder="您的邮箱（可选）">
+                <textarea placeholder="请在此输入您的问题、建议或讨论内容..." required></textarea>
+                <button type="submit">提交意见</button>
+            </form>
+            <p style="margin-top: 15px; color: #7f8c8d; font-size: 0.9em;">
+                💡 您的意见将帮助我们不断改进。所有提交内容将被匿名处理用于优化服务。
+            </p>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 学习平台. 保留所有权利。
+        </div>
+    </div>
+</body>
+</html>
